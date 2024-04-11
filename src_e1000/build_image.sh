@@ -12,6 +12,8 @@ if [ ! -d $rootfs ]; then
 fi
 cp $busybox_folder/_install/*  $rootfs/ -rf
 cp $work_dir/r4l_e1000_demo.ko $work_dir/$rootfs/
+cp $work_dir/rust_helloworld.ko $work_dir/$rootfs/
+cp $work_dir/rust_chrdev.ko $work_dir/$rootfs/
 cd $rootfs
 if [ ! -d proc ] && [ ! -d sys ] && [ ! -d dev ] && [ ! -d etc/init.d ]; then
     mkdir proc sys dev etc etc/init.d
